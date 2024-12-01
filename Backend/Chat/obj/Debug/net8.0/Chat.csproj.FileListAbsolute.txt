@@ -33,3 +33,12 @@
 /Users/arturodenbakh/Projects/OnlineChat/Backend/Chat/obj/Debug/net8.0/ref/Chat.dll
 /Users/arturodenbakh/Projects/OnlineChat/Backend/Chat/obj/Debug/net8.0/Chat.sourcelink.json
 /Users/arturodenbakh/Projects/OnlineChat/Backend/Chat/bin/Debug/net8.0/Newtonsoft.Json.dll
+/Users/arturodenbakh/Projects/OnlineChat/Backend/Chat/bin/Debug/net8.0/Microsoft.Extensions.Caching.Abstractions.dll
+/Users/arturodenbakh/Projects/OnlineChat/Backend/Chat/bin/Debug/net8.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll
+/Users/arturodenbakh/Projects/OnlineChat/Backend/Chat/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/arturodenbakh/Projects/OnlineChat/Backend/Chat/bin/Debug/net8.0/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/arturodenbakh/Projects/OnlineChat/Backend/Chat/bin/Debug/net8.0/Microsoft.Extensions.Options.dll
+/Users/arturodenbakh/Projects/OnlineChat/Backend/Chat/bin/Debug/net8.0/Microsoft.Extensions.Primitives.dll
+/Users/arturodenbakh/Projects/OnlineChat/Backend/Chat/bin/Debug/net8.0/Pipelines.Sockets.Unofficial.dll
+/Users/arturodenbakh/Projects/OnlineChat/Backend/Chat/bin/Debug/net8.0/StackExchange.Redis.dll
+/Users/arturodenbakh/Projects/OnlineChat/Backend/Chat/bin/Debug/net8.0/System.Diagnostics.DiagnosticSource.dll
