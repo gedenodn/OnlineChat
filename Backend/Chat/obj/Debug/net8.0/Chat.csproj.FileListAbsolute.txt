@@ -31,3 +31,5 @@
 /Users/arturodenbakh/Projects/OnlineChat/Backend/Chat/obj/Debug/net8.0/Chat.pdb
 /Users/arturodenbakh/Projects/OnlineChat/Backend/Chat/obj/Debug/net8.0/Chat.genruntimeconfig.cache
 /Users/arturodenbakh/Projects/OnlineChat/Backend/Chat/obj/Debug/net8.0/ref/Chat.dll
+/Users/arturodenbakh/Projects/OnlineChat/Backend/Chat/obj/Debug/net8.0/Chat.sourcelink.json
+/Users/arturodenbakh/Projects/OnlineChat/Backend/Chat/bin/Debug/net8.0/Newtonsoft.Json.dll

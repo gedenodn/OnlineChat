@@ -1,17 +1,38 @@
-import { Heading, Text, Input } from "@chakra-ui/react";
+import React, { useState } from 'react';
 
-export const WaitingRoom = () => {
+export const WaitingRoom = ({ joinChat }) => {
+  const [userName, setUsername] = useState("");
+  const [chatRoom, setChatRoom] = useState("");
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    joinChat(userName, chatRoom);
+  };
+
   return (
-    <form className="max-w-sm w-full bg-white p-8 rounded shadow-lg">
-      <Heading>Online chat</Heading>
+    <form onSubmit={onSubmit} className="max-w-sm w-full bg-white p-8 rounded shadow-lg">
+      <h1 className="text-xl font-bold">Online chat</h1>
       <div className="mb-4">
-        <Text fontSize={"sm"}>Username</Text>
-        <Input name="username" placeholder="Enter username" />
+        <label htmlFor="username" className="block text-sm">Username</label>
+        <input
+          onChange={(e) => setUsername(e.target.value)}
+          name="username"
+          id="username"
+          placeholder="Enter username"
+          className="w-full px-4 py-2 border border-gray-300 rounded"
+        />
       </div>
       <div className="mb-4">
-        <Text fontSize={"sm"}>Chat room</Text>
-        <Input name="chatRoom" placeholder="Enter chat room" />
+        <label htmlFor="chatRoom" className="block text-sm">Chat room</label>
+        <input
+          onChange={(e) => setChatRoom(e.target.value)}
+          name="chatRoom"
+          id="chatRoom"
+          placeholder="Enter chat room"
+          className="w-full px-4 py-2 border border-gray-300 rounded"
+        />
       </div>
+      <button type="submit" className="w-full bg-blue-500 text-white py-2 rounded">Join chat</button>
     </form>
   );
 };

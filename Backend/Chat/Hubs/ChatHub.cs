@@ -12,10 +12,10 @@ public interface IChatClient
 
 public class ChatHub : Hub<IChatClient>
 {
-    public async Task JoinChat(UserConnection connection)
-    {
-        await Groups.AddToGroupAsync(Context.ConnectionId, connection.ChatRoom);
-   
-        await Clients.Group(connection.ChatRoom).ReceiveMessage("Admin", $"{connection.User} has joined the chat");
-    }
+   public async Task JoinChat(UserConnection connection)
+{
+    await Groups.AddToGroupAsync(Context.ConnectionId, connection.ChatRoom);
+    await Clients.Group(connection.ChatRoom).ReceiveMessage("Admin", $"{connection.UserName} has joined the chat");
+}
+
 }
