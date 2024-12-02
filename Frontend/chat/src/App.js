@@ -60,7 +60,7 @@ function App() {
           messages={messages}
           chatRoom={chatRoom}
           closeChat={closeChat}
-          sendMessage={sendMessage} // Pass sendMessage function here
+          sendMessage={sendMessage} 
         />
       ) : (
         <WaitingRoom joinChat={joinChat} />

@@ -1,38 +1,45 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 export const Chat = ({ messages, chatRoom, closeChat, sendMessage }) => {
   const [message, setMessage] = useState("");
+  const messagesEndRef = useRef(null);
 
   const onSendMessage = () => {
     if (message.trim()) {
-      console.log("Sending message:", message);
       sendMessage(message);
       setMessage("");
     }
   };
 
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
+
   return (
-    <div className="w-1/2 bg-white p-8 rounded shadow-lg">
-      <div className="flex flex-row justify-between mb-5">
+    <div className="relative w-full max-w-lg mx-auto bg-white p-4 rounded shadow-lg border border-gray-300">
+      <div className="flex flex-row justify-between items-center mb-4">
         <h1 className="text-lg font-bold">{chatRoom}</h1>
         <button
           onClick={closeChat}
-          className="text-red-500 hover:text-red-700 font-bold"
+          className="text-red-500 hover:text-red-700 font-bold text-xl"
         >
           ×
         </button>
       </div>
-      <div className="space-y-4">
+      {}
+      <div className="overflow-y-auto h-96 p-2 border-t border-b border-gray-200">
         {messages.map((messageInfo, index) => (
-          <div key={index} className="p-4 bg-gray-100 rounded shadow">
-            <p className="text-sm text-gray-700">
+          <div key={index} className="mb-2">
+            <p className="text-sm text-gray-600">
               <strong>{messageInfo.userName}:</strong> {messageInfo.message}
             </p>
           </div>
         ))}
+        <div ref={messagesEndRef} />
       </div>
+      {}
       <div className="mt-4">
-        <div className="flex gap-3">
+        <div className="flex gap-2">
           <input
             type="text"
             value={message}
